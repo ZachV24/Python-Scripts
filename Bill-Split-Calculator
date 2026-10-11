@@ -1,11 +1,16 @@
 print("Bill Split Calculator")
 
-bill = float(input())
-tip = float(input())
-split = int(input())
 
+#Takes input from user for bill amount, tip percentage, and number of people to split the bill
+bill = float(input("Enter the total bill amount: "))
+tip = float(input("Enter the tip percentage: "))
+split = int(input("Enter the number of people to split the bill: "))
+
+
+#Calculates the tip amount and total bill including tip
 tip_amount = bill * (tip / 100)
 total = bill + tip_amount
 
-print(f"Total abill (Inlcuding tip): ${total}")
+#Displays the total bill including tip and the amount each person should pay
+print(f"Total bill (Including tip): ${total}")
 print(f"Each person should pay: ${total / split}")
