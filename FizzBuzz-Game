@@ -1,0 +1,23 @@
+# Define the function with a safe parameter name like 'num'
+def fizzbuzz(num):
+    if num % 3 == 0 and num % 7 == 0:
+        return "FizzBuzz"
+    elif num % 3 == 0:
+        return "Fizz"
+    elif num % 7 == 0:
+        return "Buzz"
+    elif "3" in str(num):  # <--- Add this new condition here
+        return "Almost Fizz"
+    else:
+        return str(num)
+
+#Code executing AFTER the function (Notice no indentation here)
+print("Welcome to FizzBuzz!")
+
+#Get input and cast to int
+user_input = int(input())
+
+#Call the function and print the output
+for i in range(1, user_input + 1):
+    result = fizzbuzz(i)
+    print(result)
